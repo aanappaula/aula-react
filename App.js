@@ -1,22 +1,16 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/Header';
+import Listagem from './src/components/Listagem';
 export default function App() {
-  const tasks = [
-    {nome: "Ana", idade: 17},
-    {nome: "Elias", idade: 16},
-    {nome: "Luiza", idade: 15},
-    {nome: "Cardozo", idade: 14},
-    {nome: "Larissa", idade: 13},
-  ];
+
   return (
     <View style={styles.container}>
-      <Header />
-      <View>
-        <FlatList data={tasks} renderItem={({ item }) => <Text>{item.nome} - {item.idade}</Text>} />
-      </View>
+      <Header titulo="Listagem de Alimentos"/>
+      <Listagem />
     </View>
   );
-}
+  }
+
 
 const styles = StyleSheet.create({
   container: {
